@@ -1,0 +1,4 @@
+ShoppingCart
+============
+
+Angular shopping cart
