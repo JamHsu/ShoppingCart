@@ -1,0 +1,32 @@
+
+ <table class="table" >
+    <tr class="ShoppingCartHead">    
+        <th align="left">Image</th>
+        <th>Name</th>            
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>SubTotal</th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tbody>
+    <tr ng-repeat="item in items">
+        <td><Image width="150" align="left" ng-src="{{item.imageUrl}}"></Image></td>
+        <td>{{item.name}}</td>
+        <td><input type="number" ng-model="item.quantity" ng-required class="input-mini"></td>
+        <td class="price" >{{item.price}}</td>
+        <td class="price" >{{item.quantity * item.price | currency}}</td>
+        <td>
+            [<a href ng-click="removeItem($index)">X</a>]
+        </td>
+    </tr>
+    </tbody>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Total:</td>
+        <td class="price">{{calculateTotal() | currency}}</td>
+    </tr>
+</table>
