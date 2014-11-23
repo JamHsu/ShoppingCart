@@ -30,23 +30,6 @@ angular.module('SampleApp')
 			}
 		]
 
-		// for test
-		var items = {
-				id: 1,
-	            quantity: 10,
-	            description: 'item',
-	            price: 9.95
-	        }
-
 		var vm = this;
-		vm.testItem = new cartItem(100, 'item', 50, 'addItem', 1);
-		// vm.testItem.setImageUrl("http://127.0.0.1:8080/WebSite_W_Studio/web/image/2");
-
-		vm.itemStore = {};
 		vm.products = products;
-		vm.testClick = testClick;
-
-		function testClick() {
-			console.log('12345');
-		}
 	}
