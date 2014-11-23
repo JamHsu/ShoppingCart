@@ -1,0 +1,4 @@
+<div>
+	<a ng-show="isItemInCart(id)" ng-click="removeItem(id)" class="btn btn-default">Item is added to cart</a>
+	<a ng-hide="isItemInCart(id)" href ng-click="addCartItem(id, name, price, image)" class="btn btn-default">Add this item</a>
+</div>

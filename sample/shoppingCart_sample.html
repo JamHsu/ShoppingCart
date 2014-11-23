@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="SampleApp">
+<head>
+    <meta charset="utf-8">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/BootstrapShoppingCart.css" rel="stylesheet">
+
+    <script src="js/angular.js"></script>
+    <script src="js/ngStorage.min.js"></script>
+    <script src="../js/shopping-cart.js"></script>
+    <script src="js/SampleController.js"></script>
+</head>
+<body>
+    <h2>Shopping Card Template</h2>
+    <a href="summary.html" style="float:right" ><div mini-cart></div></a>
+    <div style="clear:both" class="row" ng-controller="SampleController as vm">        
+        
+        <div ng-repeat = "product in vm.products" class="col-sm-4">
+            <div class="product-image-wrapper">
+                <div class="single-products">
+                    <div class="productinfo">
+                        <img src="{{product.imageUrl}}" alt=""/>
+                        <p>{{product.name}}</p>                                     
+                        <h2>${{product.price}}</h2>
+                    </div>
+                    <div add-to-cart-button 
+                         id="{{product.id}}"
+                         name="{{product.name}}"
+                         price="{{product.price}}"
+                         image="{{product.imageUrl}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>
