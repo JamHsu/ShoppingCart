@@ -201,44 +201,6 @@ angular
 		return item;
  	}
 
-angular
-	.module('ShoppingCart')
-	.controller('ShoppingCartController', ShoppingCartController);
-
-	ShoppingCartController.$injector = ['$scope', 'cart', 'cartItem'];
-	function ShoppingCartController($scope, cart, cartItem) {
-
-		// for test
-		var items = {
-				id: 0,
-	            quantity: 10,
-	            description: 'item',
-	            price: 9.95
-	        }
-
-		var vm = this;
-		vm.testItem = new cartItem(100, 'item', 50, 'addItem', 1);
-		vm.testItem.setImageUrl("http://127.0.0.1:8080/WebSite_W_Studio/web/image/2");
-
-		vm.testF = testF;
-		vm.itemStore = {};
-		vm.testClick = testClick;
-
-		function testF(testItem) {
-			item = {
-				a:1,
-				b:'adf'
-			}
-			testItem.a = '123';
-			return testItem;
-		}
-
-		function testClick() {
-			console.log('12345');
-		}
-	
-	}
-
 // directive
 angular
 	.module('ShoppingCart')
