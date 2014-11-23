@@ -12,7 +12,10 @@
 </head>
 <body>
     <h2>Shopping Card Template</h2>
-    <a href="summary.html" style="float:right" ><div mini-cart></div></a>
+    <div style="float:right" >
+        <div mini-cart></div>
+        <a href="summary.html">show summary</a>
+    </div>
     <div style="clear:both" class="row" ng-controller="SampleController as vm">        
         
         <div ng-repeat = "product in vm.products" class="col-sm-4">
