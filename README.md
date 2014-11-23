@@ -17,15 +17,15 @@ Usage
 This module support three directives.
 
 ### cart-summary
-<div cart-summary></div>
+    <div cart-summary></div>
 
 ###add-to-cart-button
-<div add-to-cart-button 
-id="{{id}}"
-name="{{name}}"
-price="{{price}}"
-image="{{imageUrl}}">
-</div>
+    <div add-to-cart-button 
+        id="{{id}}"
+        name="{{name}}"
+        price="{{price}}"
+        image="{{imageUrl}}">
+    </div>
 
 ### mini-cart
-<div mini-cart></div>
+    <div mini-cart></div>
