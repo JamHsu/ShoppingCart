@@ -16,20 +16,14 @@
     <div style="clear:both" class="row" ng-controller="SampleController as vm">        
         
         <div ng-repeat = "product in vm.products" class="col-sm-4">
-            <div class="product-image-wrapper">
-                <div class="single-products">
-                    <div class="productinfo">
-                        <img src="{{product.imageUrl}}" alt=""/>
-                        <p>{{product.name}}</p>                                     
-                        <h2>${{product.price}}</h2>
-                    </div>
-                    <div add-to-cart-button 
-                         id="{{product.id}}"
-                         name="{{product.name}}"
-                         price="{{product.price}}"
-                         image="{{product.imageUrl}}">
-                    </div>
-                </div>
+            <img src="{{product.imageUrl}}" alt=""/>
+            <p>{{product.name}}</p>                                     
+            <h2>${{product.price}}</h2>
+            <div add-to-cart-button 
+                 id="{{product.id}}"
+                 name="{{product.name}}"
+                 price="{{product.price}}"
+                 image="{{product.imageUrl}}">
             </div>
         </div>
     </div>
